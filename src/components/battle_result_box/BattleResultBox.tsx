@@ -5,7 +5,7 @@ const BattleResultBox = (turn: turn) => {
     <>
       <div>the results of the last battle</div>
       <button>New Game</button>
-      <button>Restart</button>
+      <button onClick={() => turn.set(1)}>Restart</button>
     </>
   );
 };

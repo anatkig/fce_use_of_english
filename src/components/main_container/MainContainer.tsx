@@ -3,7 +3,6 @@ import { useState } from "react";
 import InitialBox from "../initial_box/InitialBox";
 import TaskBox from "../task_box/TaskBox";
 import BattleResultBox from "../battle_result_box/BattleResultBox";
-import { textChangeRangeIsUnchanged } from "typescript";
 
 const MainContainer = () => {
   const [state, setState] = useState(1);
@@ -19,7 +18,11 @@ const MainContainer = () => {
     }
   };
 
-  return <Container>{switcher()}</Container>;
+  return (
+    <Container className="box border border-primary rounded">
+      {switcher()}
+    </Container>
+  );
 };
 
 export default MainContainer;
