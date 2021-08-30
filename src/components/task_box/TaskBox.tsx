@@ -1,23 +1,23 @@
 import YouPlayerBox from "../you_player_box/YouPlayerBox";
 import { turn } from "../../data/types";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Timer from "../timer/Timer";
+import TaskItself from "../task_itself/TaskItself";
 
 const TaskBox = (turn: turn) => {
   return (
     <>
       <Container className="box">
-        <YouPlayerBox />
-        <p>Tasks here</p>
-        <Timer set={turn.set} num={turn.num} />
-        <ol>
-          <li>timer = 3 minute</li>
-          <li>
-            1 task - picture with the task buttons underneath for correct
-            answers
-          </li>
-          <li>after time is over automatically goes to Battle Results</li>
-        </ol>
+        <Row>
+          <Col>
+            <YouPlayerBox />
+          </Col>
+
+          <Col>
+            <Timer set={turn.set} num={turn.num} />
+          </Col>
+        </Row>
+        <TaskItself set={turn.set} num={turn.num} />
       </Container>
     </>
   );

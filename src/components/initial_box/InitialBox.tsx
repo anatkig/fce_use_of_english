@@ -2,26 +2,43 @@ import { turn } from "../../data/types";
 import Rename from "../form/Rename";
 import { useState, useEffect } from "react";
 import NameForm from "../form/NameForm";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 const InitialBox = (turn: turn) => {
-  const [state, setState] = useState(<div></div>);
+  const [playerName, setPlayerName] = useState<string | null>();
+  const [isName, setIsName] = useState(false);
+  const [changeName, setChangeName] = useState(false);
 
   useEffect(() => {
     const name = localStorage.getItem("name");
-    if (!name) {
-      setState(<NameForm setState={setState} />);
-    } else {
-      setState(<Rename name={name} setState={setState} />);
-    }
-  }, []);
+    setPlayerName(name);
+    if (name) setIsName(true);
+    if (changeName) setIsName(false);
+  }, [changeName]);
 
   return (
     <>
       <Container className="box">
-        {state}
+        {isName ? (
+          <h3>Welcome, {playerName}!</h3>
+        ) : (
+          <Row className="row-custom">
+            <NameForm setIsName={setIsName} setChangeName={setChangeName} />
+          </Row>
+        )}
 
-        <Button onClick={() => turn.set(2)}>Start Game</Button>
+        <Row className="row-custom">
+          <Button onClick={() => turn.set(2)} className="start-button">
+            Start Game
+          </Button>
+        </Row>
+        <Row className="row-custom">
+          {isName && <Rename setChangeName={setChangeName} />}
+          <LinkContainer to="/Statistics">
+            <Button className="button-custom">Statistics</Button>
+          </LinkContainer>
+        </Row>
       </Container>
     </>
   );

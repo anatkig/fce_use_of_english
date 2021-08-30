@@ -1,28 +1,31 @@
-import { formState } from "../../data/types";
-import Rename from "./Rename";
+import { Name } from "../../data/types";
+
 import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
 
-const NameForm = (props: formState) => {
+const NameForm = (props: Name) => {
   const [state, setState] = useState("");
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
     localStorage.setItem("name", state);
-    props.setState(<Rename name={state} setState={props.setState} />);
+    props.setIsName(true);
+    props.setChangeName(false);
     setState("");
   };
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form
+        onSubmit={handleSubmit}
+        style={{ marginTop: "2%", marginBottom: "4%" }}
+      >
         <Form.Group controlId="controlInput1" className="mb-3">
-          <Form.Label> Change your name here</Form.Label>
           <Form.Control
             type="text"
             placeholder="Type your name here"
             value={state}
-            onChange={e => setState(e.target.value)}
+            onChange={(e) => setState(e.target.value)}
           />
         </Form.Group>
         <Button type="submit">Submit</Button>

@@ -1,15 +1,15 @@
-import { name } from "../../data/types";
-import NameForm from "./NameForm";
+import { changeName } from "../../data/types";
+
 import { Button } from "react-bootstrap";
 
-const Rename = (props: name) => {
+const Rename = (props: changeName) => {
   return (
     <>
-      <p>Welcome, {props.name}!</p>
       <Button
         onClick={() => {
-          props.setState(<NameForm setState={props.setState} />);
+          props.setChangeName(true);
         }}
+        className="button-custom"
       >
         Change name
       </Button>

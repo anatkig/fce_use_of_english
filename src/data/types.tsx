@@ -4,10 +4,29 @@ export type turn = {
 };
 
 export type name = {
-  name: string;
-  setState: React.Dispatch<React.SetStateAction<JSX.Element>>;
+  name: string | null | undefined;
+  setState: React.Dispatch<React.SetStateAction<string | null | undefined>>;
 };
 
 export type formState = {
-  setState: React.Dispatch<React.SetStateAction<JSX.Element>>;
+  setState: React.Dispatch<React.SetStateAction<string | null | undefined>>;
+};
+
+export type ContextStore = {
+  correctAnswersNumber: number;
+  changeCorrectAnswersNumber: (num: number) => void;
+  dummie: string;
+  setDummie: React.Dispatch<React.SetStateAction<string | undefined>>;
+};
+
+export type isName = {
+  setIsName: React.Dispatch<React.SetStateAction<boolean>>;
+};
+export type changeName = {
+  setChangeName: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export type Name = {
+  setIsName: React.Dispatch<React.SetStateAction<boolean>>;
+  setChangeName: React.Dispatch<React.SetStateAction<boolean>>;
 };

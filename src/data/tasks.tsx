@@ -1,8 +1,9 @@
 export const tasks = [
   {
-    html: (
-      <pre>
-        <h3> A bicycle you can fold up</h3>
+    title: <h5> A bicycle you can fold up</h5>,
+    html: `
+
+
         Folding bicycles have (0) ......... around for quite some time now.
         However, an amazing new Japanese version (1) ......... be folded with a
         swiftness and efficiency never seen before. This bike is designed (2)
@@ -17,14 +18,12 @@ export const tasks = [
         need to be able to store their bikes in tiny areas at home or the
         office. And (8) ......... they should want to take their bicycle on the
         underground, a folding model is a big advantage.
-      </pre>
-    ),
-    correctAnswers: ["can", "so", "with", "not", "and", "have", "where", "if"]
+     `,
+    correctAnswers: ["can", "so", "with", "not", "and", "have", "where", "if"],
   },
   {
-    html: (
-      <pre>
-        <h3>Animal communication</h3>
+    title: <h5> Animal Language</h5>,
+    html: `
         It (0) 0... sometimes said that animals use language. Certainly some
         animal species have developed amazingly sophisticated ways of
         communicating with (1) ......... another. But there are huge differences
@@ -40,8 +39,16 @@ export const tasks = [
         animals have even managed to put signs together in (7) ......... to make
         simple sentences. However, getting them to do this takes a huge (8)
         ......... of training.
-      </pre>
-    ),
-    correctAnswers: ["one", "as", "what", "of", "in", "been", "order", "amount"]
-  }
+      `,
+    correctAnswers: [
+      "one",
+      "as",
+      "what",
+      "of",
+      "in",
+      "been",
+      "order",
+      "amount",
+    ],
+  },
 ];

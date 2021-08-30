@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { turn } from "../../data/types";
 
 const Timer = ({ set }: turn) => {
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(180);
 
   useEffect(() => {
     const timer = (inter: NodeJS.Timeout) => {
@@ -15,11 +15,11 @@ const Timer = ({ set }: turn) => {
   }, [time, set]);
 
   return (
-    <h1>
+    <h4>
       {`${Math.floor(time / 60)}`.padStart(2, "0") +
         ":" +
         `${Math.floor(time % 60)}`.padStart(2, "0")}
-    </h1>
+    </h4>
   );
 };
 

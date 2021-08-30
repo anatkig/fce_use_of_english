@@ -1,18 +1,14 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-
 const Header = () => {
   return (
-    <>
-      <p>FCE Use Of English</p>
-
-      <Navbar
-        bg="dark"
-        variant="dark"
+    <div className="header">
+      <h3>FCE Use Of English</h3>
+      {/* <Navbar
+        bg="light"
+        variant="light"
         expand="lg"
-        className="border border-primary rounded"
+        className="border border-primary rounded navbar-custom"
       >
-        <Container>
+        <Container className="header-container">
           <Nav className="me-auto ">
             <LinkContainer to="/">
               <Nav.Link href="#home">Home</Nav.Link>
@@ -26,7 +22,8 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
-    </>
+     */}
+    </div>
   );
 };
 

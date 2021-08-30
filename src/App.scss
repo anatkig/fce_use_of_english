@@ -3,20 +3,41 @@
   flex-direction: column;
   align-items: center;
 }
+table *{
+  color:	#26495c;
+}
 
+.task-text-container{
+  text-align:justify;
+  padding:0%;
+}
 
 .App{
   text-align: center;
-  background-color: #282c34;
+  background-color: #e5e5dc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: 	#26495c;
+  font-weight:normal;
+  font-size: 1.05rem;
+}
+.header{
+  margin-top: 1%;
+
 }
 
+.header-container a {
+  padding:0%;
+  font-weight: bold;
+  color: #0d6efd;
+}
+.navbar-custom{
+  background-color: white;
+  color: #0d6efd;
+}
 .App-link {
   color: #61dafb;
 }
@@ -29,14 +50,38 @@
     transform: rotate(360deg);
   }
 }
-form{
+.form-custom{
   width: 50%;
-  margin: auto;
+ margin: 2% auto;
+}
+.row-custom{
+  margin: 4% !important;
+  width: 20vw !important;
+}
+.button-custom{
+  margin:1%;
+
+}
+.start-button{
+  width: 20vw !important;
+  font-size: 1.4rem !important;
+  border-radius: 17px !important;
+  background-color: rgb(0, 197, 43) !important;
+
+}
+.start-button:hover{
+  background-color: rgb(2, 128, 29) !important;
+}
+.btn{
+  font-weight: bold !important
 }
 .box{
   @include flex();
-  margin: 2%;
+  margin-top: 1%;
+  padding:0%;
+
+
 }
 .box > *{
-   margin: 2%;
+   margin: 0.5%;
 }
