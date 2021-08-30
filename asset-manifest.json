@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fce_use_of_english/static/css/main.1e67ffd5.chunk.css",
+    "main.js": "/fce_use_of_english/static/js/main.83b92434.chunk.js",
+    "main.js.map": "/fce_use_of_english/static/js/main.83b92434.chunk.js.map",
+    "runtime-main.js": "/fce_use_of_english/static/js/runtime-main.6e4dcb3a.js",
+    "runtime-main.js.map": "/fce_use_of_english/static/js/runtime-main.6e4dcb3a.js.map",
+    "static/css/2.fb17aa6d.chunk.css": "/fce_use_of_english/static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.e1530eb9.chunk.js": "/fce_use_of_english/static/js/2.e1530eb9.chunk.js",
+    "static/js/2.e1530eb9.chunk.js.map": "/fce_use_of_english/static/js/2.e1530eb9.chunk.js.map",
+    "static/js/3.3d787a54.chunk.js": "/fce_use_of_english/static/js/3.3d787a54.chunk.js",
+    "static/js/3.3d787a54.chunk.js.map": "/fce_use_of_english/static/js/3.3d787a54.chunk.js.map",
+    "index.html": "/fce_use_of_english/index.html",
+    "static/css/2.fb17aa6d.chunk.css.map": "/fce_use_of_english/static/css/2.fb17aa6d.chunk.css.map",
+    "static/css/main.1e67ffd5.chunk.css.map": "/fce_use_of_english/static/css/main.1e67ffd5.chunk.css.map",
+    "static/js/2.e1530eb9.chunk.js.LICENSE.txt": "/fce_use_of_english/static/js/2.e1530eb9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e4dcb3a.js",
+    "static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.e1530eb9.chunk.js",
+    "static/css/main.1e67ffd5.chunk.css",
+    "static/js/main.83b92434.chunk.js"
+  ]
+}
